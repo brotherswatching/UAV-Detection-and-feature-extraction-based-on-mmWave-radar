@@ -6,27 +6,56 @@ The objectives is as follows,
 * Based on the extracted image features, key characteristics of the unmanned aerial vehicle, including distance, azimuth angle, blade length, and rotation period are systematically identified and computed.
 * The experimental data should be verified based on multiple methods.
 
-Only **part of the project** — specifically my own work — are showcased in this repository.  
-Entire codes and workflow will not be presented because it's a Collaborative Research and Development Project based on platform in our lab. 
+Only **part of the project** — specifically what I've worked on — are showcased in this repository.  
 
 The approaches applied in this project are **not yet fully developed**. This repository mainly serves as a record and summary.  
 
 Discussions are welcome.
 
-# Experimental Tools
+# 1 Experimental Tools
 We use the AWR1642BOOST mmWave Radar Sensor and DCA1000EVM Data-Capture Adapter.  
-Please check the [Experimental_Tools](./Experimental_Tools) for more details.
+## 1.1 the AWR1642BOOST mmWave Radar Sensor
 
-# Experimental Setup
+## 1.2 the DCA1000EVM Data-Capture Adapter
+
+# 2 Experimental Setup
+## 2.1 Board to board connection
+
+## 2.2 MMWAVE-STUDIO
+
+## 2.3 Interface of Sensor Configuration of MMWAVE-STUDIO
 [Board to board connection](./Experimental_Setup/Board%20to%20board%20connection), [MMWAVE-STUDIO](./Experimental_Setup/MMWAVE-STUDIO), and [Interface of Sensor Configuration of MMWAVE-STUDIO](./Experimental_Setup/Interface%20of%20Sensor%20Configuration%20of%20MMWAVE-STUDIO) are presented in the filelist. You can do direct modification of configuration parameters based on your target.
 
-# Related_defination
+# 3 Related_defination
 Please check [Related_defination](./Related_defination) if you do not familar with related definations like Doppler Effect and Micro-Doppler.
+## 3.1 Doppler Effect
 
-# Basic_Measurement_Theory
-[Basic_Measurement_Theory](./Basic_Measurement_Theory) covers the rough idea to do the project-range measurement, angle measurement, STFT and Time-frequency distribution fitting. If you want to know more about the details or the inference process, please check the [Reference](#Reference).
+## 3.2 Micro-Doppler
 
-# Outcomes
+# 4 Basic_Measurement_Theory
+[Basic_Measurement_Theory](./Basic_Measurement_Theory) covers the rough idea to do the project-range measurement, angle measurement, STFT and Time-frequency distribution fitting. 
+## 4.1 Range measurement
+
+## 4.2 Angle measurement
+
+## 4.3 STFT
+
+## 4.4 Time-frequency distribution fitting
+
+## 4.5 The model of the Rotating Target Echo
+
+If you want to know more about the details or the inference process, please check the [Reference](#Reference).
+
+
+# 5 Outcomes
+## 5.1 Targets used in the experiment
+
+## 5.2 Radar imaging(RA heatmap)
+
+## 5.3 Radar imaging(STFT heatmap)
+
+## 5.4 the fitting curve
+
 [Outcomes](./Outcomes) shows targets used in the experiment, radar imaging(RA heatmap, STFT heatmap), and the result of the feature extraction-the fitting curve(which can be obtained through the process of using Time–Frequency Distribution fitting algorithm-original grayscale image, binarized image, and scaled discrete data).  
 
 We can obtain the distance and the azimuth angle from the RA heatmap.
