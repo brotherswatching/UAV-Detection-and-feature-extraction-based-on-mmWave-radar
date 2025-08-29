@@ -34,6 +34,25 @@ We can obtain the distance and the azimuth angle from the RA heatmap.
 We can compute the rotational speed and the blade length through the fitting curve
 
 # Reference
+[1] He, Binyu. "Research on UAV Target Micro-Doppler Spectrogram Recognition
+Based on Deep Learning" [D]. University of Electronic Science and Technology of
+China, 2023.  
+[2] Gong, Ting. "Research on Radar Target Micro-Motion Parameter Estimation and
+Micro-Motion Form Classification Technology" [D]. National University of Defense
+Technology, 2020.  
+[3] Qin X, Deng B, Wang H. Micro-Doppler Feature Extraction of Rotating
+Structures of Aircraft Targets with Terahertz Radar[J]. Remote Sens, 2022, 14:3856.
+https://doi.org/10.3390/rs14163856  
+[4] Gao X, Xing G, Roy S, Liu H. Experiments with mmWave Automotive Radar
+Test-bed[R]. University of Washington, [n.d.].Available from : https
+//github.com/Xiangyu-Gao/mmWave-radar-signal-processing-and-microDopplerclassification  
+[5] Ma J, Dong Y W, Li Y, et al. Multi-rotor UAV's micro-Doppler characteristic
+analysis and feature extraction. Journal of University of Chinese Academy of
+Sciences, 2019, 36(2): 235-243.  
+[6] Chen, Yongbin, Li, Shaodong, Chen, Wenfeng, et al. "Modeling and
+Characteristic Analysis of Helicopter Rotor Blade Echoes" [J]. Journal of the Air
+Force Early Warning Academy, 2015, 29(05): 322-327.  
+[7] Mmwave Radar Device ADC Raw Data Capture,Ti
 
 
 
