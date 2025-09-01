@@ -8,7 +8,7 @@ The objectives is as follows,
 
 Only **part of the project** — specifically what I've worked on — are showcased in this repository.  
 
-The approaches applied in this project are **not yet fully developed**. This repository mainly serves as a record and summary.  
+The approaches applied in this project are **not yet fully developed**. This repository mainly serves as a record and a possible reference approach.  
 
 Discussions are welcome.
 
