@@ -14,20 +14,37 @@ Discussions are welcome.
 
 # 1 Experimental Tools
 We chose the AWR1642BOOST mmWave Radar Sensor together with the DCA1000EVM Data-Capture Adapter for this project. These two devices work in tandem to achieve the experimental objectives: transmitting and receiving radar echoes, capturing signals, and generating binary files. 
-![]
-
 
 ## 1.1 the AWR1642BOOST mmWave Radar Sensor
 
+*the AWR1642BOOST mmWave Radar Sensor*
+![the AWR1642BOOST mmWave Radar Sensor](./Experimental_Tools/AWR1642BOOST%20mmWave_Radar_Sensor.png)
+
+Functional block diagram of AWR1642BOOST is a baisc thing you need to know in the project.
+![Functional_block_diagram_of_AWR1642BOOST](./Experimental_Tools/Functional_block_diagram_of_AWR1642BOOST.png)
+
 ## 1.2 the DCA1000EVM Data-Capture Adapter
 
+*the DCA1000EVM Data-Capture Adapter*
+![the DCA1000EVM Data-Capture Adapter](./Experimental_Tools/Real-time_Data-Capture_Adapter_DCA1000EVM.png)
+
 # 2 Experimental Setup
+Essential preparation before the experiment.
+
 ## 2.1 Board to board connection
+A simple instruction to connect the Experimental instruments.
+![Board to board connection](./Experimental_Setup/Board_to_Board_Connection.png)
 
 ## 2.2 MMWAVE-STUDIO
+MMWAVE-STUDIO is a software officially provided by Texas Instruments. It is a stand-alone Windows application that provides the ability to configure and control mmWave sensor modules and collect analog-to-digital (ADC) data for offline analysis.   
+It provides a rich GUI interface, facilitating researchers to quickly debug it. And it supports multiple boards including DCA1000EVM and AWR1642BOOST.  
 
 ## 2.3 Interface of Sensor Configuration of MMWAVE-STUDIO
-[Board to board connection](./Experimental_Setup/Board%20to%20board%20connection), [MMWAVE-STUDIO](./Experimental_Setup/MMWAVE-STUDIO), and [Interface of Sensor Configuration of MMWAVE-STUDIO](./Experimental_Setup/Interface%20of%20Sensor%20Configuration%20of%20MMWAVE-STUDIO) are presented in the filelist. You can do direct modification of configuration parameters based on your target.
+
+*Interface of Sensor Configuration of MMWAVE-STUDIO*
+![Interface of Sensor Configuration of MMWAVE-STUDIO](./Experimental_Setup/Interface_of_Sensor_Configuration_of_MMWAVE-STUDIO.png)
+
+You can do direct modification of configuration parameters based on your project objectives and target.
 
 # 3 Related_defination
 Please check [Related_defination](./Related_defination) if you do not familar with related definations like Doppler Effect and Micro-Doppler.
