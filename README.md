@@ -53,33 +53,96 @@ If you want to know more about the details or the inference process, please chec
 ## 3.1 Doppler Effect
 The Doppler effect refers to the phenomenon that the frequency of the observed wave changes when there is relative motion between the source and the observer. This phenomenon applies to sound waves, light waves, electromagnetic waves and other types of fluctuations.
 
+Consider the scene below. Suppose that the wave has a velocity of v and a frequency of 𝑓_0, the velocity of the wave source is 𝑣_𝑠. The movement of the wave source causes the wavelength to shorten or lengthen, which affects the received frequency.
+For the right observer, the source is close, and the frequency becomes  
+𝑓= (𝑣/(𝑣−𝑣_𝑠 )) 𝑓_0  
+For the left observer, the source is far away, and the frequency becomes  
+𝑓= (𝑣/(𝑣+𝑣_𝑠 )) 𝑓_0
+
+![Doppler Effect](./Related_defination/Doppler_Effect.png)
 
 ## 3.2 Micro-Doppler
+**Basic concept**
+* Micro-Doppler is an extension of the Doppler effect, created by small movements (such as rotation, vibration, and wobble) of the target.
+* This effect superimposes additional frequency components on the Doppler spectrum to form a characteristic signal.
 
+**Difference from Classical Doppler**
+*  Classic Doppler: Frequency shift caused by the overall movement of the target.
+*  Micro-Doppler: Additional frequency shift caused by local movement of the target (e.g. limb swing, rotor rotation).
 
 # 4 Basic_Measurement_Theory
-[Basic_Measurement_Theory](./Basic_Measurement_Theory) covers the rough idea to do the project-range measurement, angle measurement, STFT and Time-frequency distribution fitting.  
-If you want to know more about the details or the inference process, please check the [Reference](#Reference). 
+We have a few objectives to cover in the project, which are realized by a technical approach consisting of several techniques-range measurement, angle measurement, STFT and time-frequency distribution fitting.   
+If you want to know more about the details or the inference process, please check the [Reference](#Reference).  
+The proficiency and accuracy of this technical approach in wider scenarios or with different targets have **not been fully evaluated**.
+
 ## 4.1 Range measurement
+It is well-known that an FMCW radar transmits a sequence of chirp signals (called a frame) and then mixes the receive echo with the local reference (transmitted signal) to yield a resulting beat signal at a frequency in the intermediate frequency (IF) band.    
+
+The frequency is :𝑓_𝑏=(𝑆∗𝑑)/𝑐  
+where S is the slope of chirp signal, d is the distance to the object, and c is speed of light.
 
 ## 4.2 Angle measurement
+Angle estimation is conducted via processing the signal at a received phased array composed of multiple elements.  
+By consulting the literature, there are several ways to do this part, such as FFT Algorithm, Multiple Signal Classification (MUSIC) Algorithm and so on. We choose to use FFT Algorithm.  
 
-## 4.3 STFT
+When the target is located far enough, and assuming an azimuth angle of θ, the phase difference between two adjacent receiving antennas can be expressed as  
+
+𝛥𝜑 =(2𝜋ℎ sin⁡(𝜃))/𝜆  
+where h is the separation between receive antenna pair.  
+
+Based on this, a fast Fourier transform (Angle FFT) is applied along the receiving antenna dimension (spatial domain), thereby enabling differentiation among various targets according to the incident angle of the target signal in the azimuth direction. The angular resolution derived from the FFT is typically expressed as  
+
+𝜃_𝑟𝑒𝑠=𝜆/(𝑁_𝑅𝑋∗ ℎ ∗cos⁡(𝜃) )  
+where 𝑁_𝑅𝑋 is the number of receive antennas.
+
+## 4.3 STFT(Short-Time Fourier Transform)
+The expression of STFT is:
+𝑓(𝑡, 𝑓)= ∫_(𝜏=−∞)^(+∞)▒𝑥(𝜏) ∗ℎ(𝑡−𝜏)∗exp⁡(−𝑗∗2𝜋∗𝑓∗𝜏)𝑑𝜏
+
+The basic idea is to use a narrow time-window function 𝒉(𝒕) to capture a short segment of the signal and smooth it within that interval. Then, a Fourier transform is applied to this windowed signal to extract its frequency components, effectively filtering out signals outside the window. As the window slides over time, we obtain a two-dimensional time-frequency distribution that reveals the signal's spectral characteristics across different time periods.
+
+The STFT algorithm is easy to use and is suitable for the analysis of micro-Doppler phenomena. We use STFT to do time–frequency analysis in our work.
 
 ## 4.4 Time-frequency distribution fitting
+According to the references, a robust fitting algorithm is the fitting algorithm based on time–frequency distribution is applied to extract micro-Doppler features. After obtaining the parameters , we need to put them into the model of the Rotating Target Echo to extract the Physical characteristics(blade length and the rotor speed)
+
+![Time–Frequency Distribution Fitting](./Basic_Measurement_Theory/Time–Frequency%20Distribution%20Fitting.png)
 
 ## 4.5 The model of the Rotating Target Echo
+Consider the model below.
+
+The frequency-domain features of the rotating propeller are represented by the Doppler frequency shift, and the instantaneous Doppler frequency shift generated by the blade tip rotation of the blade k is expressed as follows:
+
+𝑓_𝐷𝑘(𝑡) = (1/2𝜋)∗((𝑑𝜑_𝑘(𝑡) )/𝑑𝑡)= −(2𝛺/𝜆)∗cos⁡(𝛽)∗sin⁡(𝛺∗𝑡)∗cos⁡(𝜑_0+(2𝜋∗𝑘)/𝑁)−cos⁡(𝛺∗𝑡)∗sin⁡(𝜑_0+(2𝜋∗𝑘)/𝑁),  (𝑘=0,1,2,…,𝑁−1)
+
+It can be seen that the rotational speed modulates the instantaneous Doppler frequency as a sinusoidal curve, and the maximum Doppler frequency shift of the rotating blade is obtained at the tip of it, as follows:  
+
+𝑓_𝐷𝑚𝑎𝑥=(2∗𝛺∗𝑙_𝑝)/𝜆  
+Where 𝛺 is the angular velocity, 𝑙_𝑝 is the blade length
+
+So if we have the estimated value of the maximum Doppler frequency shifts obtained by the fitting curves, the blade length can be calculated.
+
+![The model of the Rotating Target Echo](./Basic_Measurement_Theory/model%20of%20the%20Rotating%20Target%20Echo.png)
 
 # 5 Outcomes
+
 ## 5.1 Targets used in the experiment
+
+We have two targets used in the experiment:
+
+*two-bladed helicopter rotor model*
+
+![two-bladed helicopter rotor model](./Outcomes/two-bladed_helicopter_rotor_model.png)
+
+*eight-bladed UAV*
+
+![eight-bladed UAV](./Outcomes/eight-bladed_UAV.png)
 
 ## 5.2 Radar imaging(RA heatmap)
 
 ## 5.3 Radar imaging(STFT heatmap)
 
 ## 5.4 the fitting curve
-
-[Outcomes](./Outcomes) shows targets used in the experiment, radar imaging(RA heatmap, STFT heatmap), and the result of the feature extraction-the fitting curve(which can be obtained through the process of using Time–Frequency Distribution fitting algorithm-original grayscale image, binarized image, and scaled discrete data).  
 
 We can obtain the distance and the azimuth angle from the RA heatmap.
 
