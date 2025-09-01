@@ -47,13 +47,19 @@ It provides a rich GUI interface, facilitating researchers to quickly debug it. 
 You can do direct modification of configuration parameters based on your project objectives and target.
 
 # 3 Related_defination
-Please check [Related_defination](./Related_defination) if you do not familar with related definations like Doppler Effect and Micro-Doppler.
+Two related definitions, namely the Doppler Effect and micro-Doppler.  
+If you want to know more about the details or the inference process, please check the [Reference](#Reference).
+
 ## 3.1 Doppler Effect
+The Doppler effect refers to the phenomenon that the frequency of the observed wave changes when there is relative motion between the source and the observer. This phenomenon applies to sound waves, light waves, electromagnetic waves and other types of fluctuations.
+
 
 ## 3.2 Micro-Doppler
 
+
 # 4 Basic_Measurement_Theory
-[Basic_Measurement_Theory](./Basic_Measurement_Theory) covers the rough idea to do the project-range measurement, angle measurement, STFT and Time-frequency distribution fitting. 
+[Basic_Measurement_Theory](./Basic_Measurement_Theory) covers the rough idea to do the project-range measurement, angle measurement, STFT and Time-frequency distribution fitting.  
+If you want to know more about the details or the inference process, please check the [Reference](#Reference). 
 ## 4.1 Range measurement
 
 ## 4.2 Angle measurement
@@ -63,9 +69,6 @@ Please check [Related_defination](./Related_defination) if you do not familar wi
 ## 4.4 Time-frequency distribution fitting
 
 ## 4.5 The model of the Rotating Target Echo
-
-If you want to know more about the details or the inference process, please check the [Reference](#Reference).
-
 
 # 5 Outcomes
 ## 5.1 Targets used in the experiment
