@@ -13,7 +13,10 @@ The approaches applied in this project are **not yet fully developed**. This rep
 Discussions are welcome.
 
 # 1 Experimental Tools
-We use the AWR1642BOOST mmWave Radar Sensor and DCA1000EVM Data-Capture Adapter.  
+We chose the AWR1642BOOST mmWave Radar Sensor together with the DCA1000EVM Data-Capture Adapter for this project. These two devices work in tandem to achieve the experimental objectives: transmitting and receiving radar echoes, capturing signals, and generating binary files. 
+![]
+
+
 ## 1.1 the AWR1642BOOST mmWave Radar Sensor
 
 ## 1.2 the DCA1000EVM Data-Capture Adapter
