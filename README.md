@@ -139,12 +139,66 @@ We have two targets used in the experiment:
 ![eight-bladed UAV](./Outcomes/eight-bladed_UAV.png)
 
 ## 5.2 Radar imaging(RA heatmap)
+We present two examples of RA heatmap which illustrate distance and angle.
+
+*RA heatmap of two-bladed helicopter rotor model*
+
+![RA heatmap of two-bladed helicopter rotor model](./Outcomes/2_blades_RA.png)
+
+This figure illustrates the position (1.45m, 9°) of a two-bladed helicopter rotor model at one time slot. 
+
+*RA heatmap of an eight-bladed UAV*
+
+![RA heatmap of an eight-bladed UAV](./Outcomes/8_blades_RA.png)
+
+This figure illustrates the position (1.50m, 4.7°) of an eight-bladed UAV at one time slot.
 
 ## 5.3 Radar imaging(STFT heatmap)
+We present a series example of STFT heatmap of two-bladed helicopter rotor model with 200 rpm and different degrees.
+
+*two blades, 0°, 200 rpm micro-Doppler map*
+
+![two blades, 0°, 200 rpm micro-Doppler map](./Outcomes/1swing%200degrees%20200rpm.png)
+
+*two blades, 30°, 200 rpm micro-Doppler map*
+
+![two blades, 30°, 200 rpm micro-Doppler map](./Outcomes/1swing%2030degrees%20200rpm.png)
+
+*two blades, 60°, 200 rpm micro-Doppler map*
+
+![two blades, 60°, 200 rpm micro-Doppler map](./Outcomes/1swing%2060degrees%20200rpm.png)
+
+Under identical angular conditions, we observed that higher rotational speeds result in denser curves with more pronounced fluctuations.
+
+From the result of experiment, we found that STFT image of the quadrotor exhibited denser features than that of a single-rotor system. Different numbers of rotors have a big effect on the STFT heatmap.
 
 ## 5.4 the fitting curve
+To show the process of using Time–Frequency Distribution fitting algorithm, we use a two-bladed helicopter rotor model, where the angle between the rotor and the ground is 30 degrees and the rotation speed is 200 rpm as an example:
 
-We can obtain the distance and the azimuth angle from the RA heatmap.
+*Original_grayscale_image*
+
+![Original_grayscale_image](./Outcomes/Original_grayscale_image.png)
+
+*Binarized_image*
+
+![Binarized_image](./Outcomes/Binarized_image.png)
+
+*Scaled_Discrete_Data*
+
+![Scaled_Discrete_Data](./Outcomes/Scaled_Discrete_Data.png)
+
+When the rotor speed is 200rpm(In practical experiments, the value tends to fluctuate to approximately 235), the fitting curve is:  
+𝑓(𝑡) = 146.938∗𝑠𝑖𝑛(26.097∗𝑡−5.387)−61.127
+
+*Sine curve fit result of discrete time-frequency curve*
+
+![Sine curve fit result of discrete time-frequency curve](./Outcomes/Sine%20curve%20fit%20result%20of%20discrete%20time-frequency%20curve.png)
+
+Therefore, the rotational speed is 249.20 rpm, the relative error is 6.38%. The estimated average maximal Doppler frequency shift is 146.93 Hz, the blade length can be calculated to be 0.069 m, the relative error is 65.1%. A significant error exists.
+
+In summary,
+
+We can obtain the distance and the azimuth angle information from the RA heatmap.
 
 We can compute the rotational speed and the blade length through the fitting curve
 
