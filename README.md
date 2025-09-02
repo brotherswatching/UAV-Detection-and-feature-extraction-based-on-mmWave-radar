@@ -138,18 +138,18 @@ We have two targets used in the experiment:
 
 ![eight-bladed UAV](./Outcomes/eight-bladed_UAV.png)
 
-## 5.2 Radar imaging(RA heatmap)
-We present two examples of RA heatmap which illustrate distance and angle.
+## 5.2 Radar imaging(DA heatmap)
+We present two examples of DA heatmap which illustrate distance and angle.
 
-*RA heatmap of two-bladed helicopter rotor model*
+*DA heatmap of two-bladed helicopter rotor model*
 
-![RA heatmap of two-bladed helicopter rotor model](./Outcomes/2_blades_RA.png)
+![DA heatmap of two-bladed helicopter rotor model](./Outcomes/2_blades_RA.png)
 
 This figure illustrates the position (1.45m, 9°) of a two-bladed helicopter rotor model at one time slot. 
 
-*RA heatmap of an eight-bladed UAV*
+*DA heatmap of an eight-bladed UAV*
 
-![RA heatmap of an eight-bladed UAV](./Outcomes/8_blades_RA.png)
+![DA heatmap of an eight-bladed UAV](./Outcomes/8_blades_RA.png)
 
 This figure illustrates the position (1.50m, 4.7°) of an eight-bladed UAV at one time slot.
 
