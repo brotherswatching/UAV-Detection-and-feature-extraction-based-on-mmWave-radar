@@ -154,6 +154,7 @@ This figure illustrates the position (1.45m, 9°) of a two-bladed helicopter rot
 This figure illustrates the position (1.50m, 4.7°) of an eight-bladed UAV at one time slot.
 
 ## 5.3 Radar imaging(STFT heatmap)
+In the project, we tested two targets at three different tilt angles — 30°, 60°, and 80°. For each angle, experiments were conducted at three different rotational speeds: 200 rpm, 600 rpm, and 1000 rpm.  
 We present a series example of STFT heatmap of two-bladed helicopter rotor model with 200 rpm and different degrees.
 
 *two blades, 0°, 200 rpm micro-Doppler map*
