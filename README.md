@@ -71,8 +71,12 @@ For the left observer, the source is far away, and the frequency becomes
 *  Micro-Doppler: Additional frequency shift caused by local movement of the target (e.g. limb swing, rotor rotation).
 
 # 4 Basic Measurement Theory
-We have a few objectives to cover in the project, which are realized by a technical approach consisting of several techniques-range measurement, angle measurement, STFT and time-frequency distribution fitting.   
-If you want to know more about the details or the inference process, please check the [Reference](#Reference).  
+We have a few objectives to cover in the project, which are realized by a workflow consisting of several techniques:range measurement, angle measurement, STFT and time-frequency distribution fitting and many signal processing techniques like CFAR and filtering.   
+
+The main workflow is shown below:
+![workflow](./Project_workflow.png)
+
+If you want to know more about the details or the inference process, please check the [Reference](#Reference).
 The proficiency and accuracy of this technical approach in wider scenarios or with different targets have **not been fully evaluated**.
 
 ## 4.1 Range measurement
