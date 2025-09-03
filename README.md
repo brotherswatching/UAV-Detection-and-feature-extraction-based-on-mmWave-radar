@@ -139,6 +139,8 @@ We have two targets used in the experiment:
 ![eight-bladed UAV](./Outcomes/eight-bladed_UAV.png)
 
 ## 5.2 Radar imaging(DA heatmap)
+The example of implementation of the process of ![range fft and angle fft](./DA_heatmap.m) in matlab.
+
 We present two examples of DA heatmap which illustrate distance and angle.
 
 *DA heatmap of two-bladed helicopter rotor model*
@@ -155,7 +157,12 @@ This figure illustrates the position (1.50m, 4.7°) of an eight-bladed UAV at on
 
 ## 5.3 Radar imaging(STFT heatmap)
 In the project, we tested two targets at three different tilt angles — 30°, 60°, and 80°. For each angle, experiments were conducted at three different rotational speeds: 200 rpm, 600 rpm, and 1000 rpm.  
+
+We have employed a series of signal processing techniques to achieve an optimal performance, including TDM-MIMO separation, CFAR detection, Doppler compensation, angle estimation and clustering, as well as radar cube cropping. 
+
 We present a series example of STFT heatmap of two-bladed helicopter rotor model with 200 rpm and different degrees.
+
+The example of implementation of the whole process of ![stft](./generate_microdoppler_stft.m) in matlab.
 
 *two blades, 0°, 200 rpm micro-Doppler map*
 
@@ -174,6 +181,8 @@ Under identical angular conditions, we observed that higher rotational speeds re
 From the result of experiment, we found that STFT image of the quadrotor exhibited denser features than that of a single-rotor system. Different numbers of rotors have a big effect on the STFT heatmap.
 
 ## 5.4 the fitting curve
+We use python to do the process of ![fitting](./fitting.py)
+
 To show the process of using Time–Frequency Distribution fitting algorithm, we use a two-bladed helicopter rotor model, where the angle between the rotor and the ground is 30 degrees and the rotation speed is 200 rpm as an example:
 
 *Original_grayscale_image*
