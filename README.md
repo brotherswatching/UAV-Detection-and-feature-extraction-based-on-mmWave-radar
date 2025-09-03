@@ -70,7 +70,7 @@ For the left observer, the source is far away, and the frequency becomes
 *  Classic Doppler: Frequency shift caused by the overall movement of the target.
 *  Micro-Doppler: Additional frequency shift caused by local movement of the target (e.g. limb swing, rotor rotation).
 
-# 4 Basic_Measurement_Theory
+# 4 Basic Measurement Theory
 We have a few objectives to cover in the project, which are realized by a technical approach consisting of several techniques-range measurement, angle measurement, STFT and time-frequency distribution fitting.   
 If you want to know more about the details or the inference process, please check the [Reference](#Reference).  
 The proficiency and accuracy of this technical approach in wider scenarios or with different targets have **not been fully evaluated**.
@@ -139,7 +139,7 @@ We have two targets used in the experiment:
 ![eight-bladed UAV](./Outcomes/eight-bladed_UAV.png)
 
 ## 5.2 Radar imaging(DA heatmap)
-The example of implementation of the process of ![range fft and angle fft](./DA_heatmap.m) in matlab.
+The example of implementation of the process of ![Range FFT and Angle FFT](./DA_heatmap.m) in matlab.
 
 We present two examples of DA heatmap which illustrate distance and angle.
 
@@ -155,6 +155,8 @@ This figure illustrates the position (1.45m, 9°) of a two-bladed helicopter rot
 
 This figure illustrates the position (1.50m, 4.7°) of an eight-bladed UAV at one time slot.
 
+For the two-bladed helicopter rotor model, the range error is 2.02% and the angular error is 0.11°. For the eight-bladed UAV, the range error is 1.35% and the angular error is 5.97 °.
+
 ## 5.3 Radar imaging(STFT heatmap)
 In the project, we tested two targets at three different tilt angles — 30°, 60°, and 80°. For each angle, experiments were conducted at three different rotational speeds: 200 rpm, 600 rpm, and 1000 rpm.  
 
@@ -162,7 +164,7 @@ We have employed a series of signal processing techniques to achieve an optimal 
 
 We present a series example of STFT heatmap of two-bladed helicopter rotor model with 200 rpm and different degrees.
 
-The example of implementation of the whole process of ![stft](./generate_microdoppler_stft.m) in matlab.
+The example of implementation of the whole process of ![STFT](./generate_microdoppler_stft.m) in matlab.
 
 *two blades, 0°, 200 rpm micro-Doppler map*
 
@@ -181,7 +183,7 @@ Under identical angular conditions, we observed that higher rotational speeds re
 From the result of experiment, we found that STFT image of the quadrotor exhibited denser features than that of a single-rotor system. Different numbers of rotors have a big effect on the STFT heatmap.
 
 ## 5.4 the fitting curve
-We use python to do the process of ![fitting](./fitting.py)
+We use python to do the process of ![Fitting](./fitting.py)
 
 To show the process of using Time–Frequency Distribution fitting algorithm, we use a two-bladed helicopter rotor model, where the angle between the rotor and the ground is 30 degrees and the rotation speed is 200 rpm as an example:
 
@@ -204,7 +206,7 @@ When the rotor speed is 200rpm(In practical experiments, the value tends to fluc
 
 ![Sine curve fit result of discrete time-frequency curve](./Outcomes/Sine%20curve%20fit%20result%20of%20discrete%20time-frequency%20curve.png)
 
-Therefore, the rotational speed is 249.20 rpm, the relative error is 6.38%. The estimated average maximal Doppler frequency shift is 146.93 Hz, the blade length can be calculated to be 0.069 m, the relative error is 65.1%. A significant error exists.
+Therefore, the rotational speed is 249.20 rpm, the relative error is 6.38%. The estimated average maximal Doppler frequency shift is 146.93 Hz, the blade length can be calculated to be 0.069 m, the relative error is 65.1%. 
 
 In summary,
 
@@ -232,6 +234,7 @@ Sciences, 2019, 36(2): 235-243.
 Characteristic Analysis of Helicopter Rotor Blade Echoes" [J]. Journal of the Air
 Force Early Warning Academy, 2015, 29(05): 322-327.  
 [7] Mmwave Radar Device ADC Raw Data Capture,Ti
+[8] https://www.bilibili.com/video/BV1h73GegE8D?spm_id_from=333.788.videopod.sections&vd_source=18926e37e2ea4ef29234e26c59a3052a
 
 
 
