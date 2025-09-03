@@ -3,7 +3,7 @@ This project is based on the existing experimental platform, namely the AWR1642 
 The objectives is as follows,
 * Set up the experimental environment and obtain good radar echo data.
 * Process the echo signal and extract its time-domain, frequency-domain and time-frequency characteristics.
-* Based on the extracted image features, key characteristics of the unmanned aerial vehicle, including distance, azimuth angle, blade length, and rotation period are systematically identified and computed.
+* Based on the extracted image features, key characteristics of the unmanned aerial vehicle, including distance, azimuth angle, blade length, and rotation speed are systematically identified and computed.
 * The experimental data should be verified based on multiple methods.
 
 Only **part of the project** — specifically what I've worked on — are showcased in this repository.  
