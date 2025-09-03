@@ -237,7 +237,7 @@ Sciences, 2019, 36(2): 235-243.
 [6] Chen, Yongbin, Li, Shaodong, Chen, Wenfeng, et al. "Modeling and
 Characteristic Analysis of Helicopter Rotor Blade Echoes" [J]. Journal of the Air
 Force Early Warning Academy, 2015, 29(05): 322-327.  
-[7] Mmwave Radar Device ADC Raw Data Capture,Ti
+[7] Mmwave Radar Device ADC Raw Data Capture,Ti  
 [8] https://www.bilibili.com/video/BV1h73GegE8D?spm_id_from=333.788.videopod.sections&vd_source=18926e37e2ea4ef29234e26c59a3052a
 
 
